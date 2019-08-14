@@ -21,6 +21,15 @@ module.exports = {
         ]
       },
       {
+        test: /\.scss$/,
+        use: [
+          // execute in reserve order
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ]
+      },
+      {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         loader: 'url-loader',
         options: {
